@@ -1,0 +1,9 @@
+main: _47b3n.plugin.Main
+version: 0.0.2
+name: MinecraftPlugin
+
+commands:
+  hello:
+    description: Send the player a wonderful message!
+  tpme:
+   description: Sends the player to a fun place!
