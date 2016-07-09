@@ -19,7 +19,7 @@ public class PlayerJoin implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		String welcomeMessage = ChatColor.translateAlternateColorCodes('&', 
-				plugin.getConfig().getString("Welcome Message"));
+				plugin.getConfig().getString("WelcomeMessage"));
 		
 		Player player = event.getPlayer();
 		player.sendMessage(welcomeMessage);

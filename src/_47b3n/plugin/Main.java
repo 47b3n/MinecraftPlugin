@@ -6,6 +6,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import _47b3n.plugin.commands.BasicKit;
 import _47b3n.plugin.commands.Day;
 import _47b3n.plugin.events.player.PlayerInteract;
 import _47b3n.plugin.events.player.PlayerJoin;
@@ -33,6 +34,7 @@ public class Main extends JavaPlugin {
 
 	public void registerCommands() {
 		getCommand("day").setExecutor(new Day());
+		getCommand("basickit").setExecutor(new BasicKit());
 	}
 
 	public void registerEvents() {

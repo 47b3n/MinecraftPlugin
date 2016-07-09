@@ -12,7 +12,7 @@ public class Day implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player player = (Player) sender;
 		player.getWorld().setTime(1000);
-		player.sendMessage(ChatColor.YELLOW + "Changed the time to day!");
+		player.sendMessage(ChatColor.DARK_BLUE + "Changed the time to day!");
 		return true;
 	}
 }

@@ -3,7 +3,5 @@
 ServerAdmins:
     - 47b3n
     - SOmeone
-WelcomeMessage: '&5Welcome to the server %p!'
-47b3n: kingdom1
-Warp: 47b3n
+WelcomeMessage: '&5Welcome to the server!'
   

@@ -5,5 +5,5 @@ name: BasicCoolPlugin
 commands:
   day:
     description: Sets the time to day!
-  setadmins:
-    description: Sets all the admins!
+  basickit:
+    description: Gives the player some basic items!
