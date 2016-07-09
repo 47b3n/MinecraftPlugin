@@ -1,9 +1,9 @@
 main: _47b3n.plugin.Main
 version: 0.1.0
-name: MinecraftPlugin
+name: BasicCoolPlugin
 
 commands:
-  hello:
-    description: Send the player a wonderful message!
-  tpme:
-   description: Sends the player to a fun place!
+  day:
+    description: Sets the time to day!
+  setadmins:
+    description: Sets all the admins!
