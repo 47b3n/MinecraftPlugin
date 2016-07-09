@@ -20,8 +20,10 @@ public class PlayerInteract implements Listener {
 	public void onInteract(PlayerInteractEvent e) {
 		if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
 			if(e.getClickedBlock().getState() instanceof Sign) {
+				@SuppressWarnings("unused")
 				Sign sign = (Sign) e.getClickedBlock().getState();
-				e.getPlayer().sendMessage("Imma fuck yo bitch nigga!");
+				
+				e.getPlayer().sendMessage("You right clicked a sign!");
 			}
 		}
 	}
