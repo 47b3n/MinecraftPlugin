@@ -9,17 +9,17 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import _47b3n.plugin.Main;
 
 public class PlayerInteract implements Listener {
-	
+
 	public Main plugin;
-	
+
 	public PlayerInteract(Main plugin) {
 		this.plugin = plugin;
 	}
-	
+
 	@EventHandler
 	public void onInteract(PlayerInteractEvent e) {
-		if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-			if(e.getClickedBlock().getState() instanceof Sign) {
+		if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+			if (e.getClickedBlock().getState() instanceof Sign) {
 				Sign sign = (Sign) e.getClickedBlock().getState();
 				sign.setLine(1, "Stop");
 				sign.update();

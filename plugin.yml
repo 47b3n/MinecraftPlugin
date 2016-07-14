@@ -7,3 +7,10 @@ commands:
     description: Sets the time to day!
   basickit:
     description: Gives the player some basic items!
+  gm:
+    description: Sets the player in another gamemode!
+  clrinv:
+    description: Cleares the inventory of the player!
+  goto:
+    description: Opens a menu with clickable teleport locations!
+    
