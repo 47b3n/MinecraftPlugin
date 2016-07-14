@@ -1,8 +1,5 @@
 # Config file for MinecraftPlugin
 
-ServerAdmins:
-    - 47b3n
-    - SOmeone
 WelcomeMessage: '&5Welcome to the server!'
 NotPlayerMessage: '&CYou must be a player to use this command!'
 NoPermissionMessage: '&CYou do not have the right permissions to do that!'
