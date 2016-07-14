@@ -16,6 +16,9 @@ import net.md_5.bungee.api.ChatColor;
 public class InventoryClick implements Listener {
 
 	private Main plugin;
+	
+	public Location kingdom1 = new Location(Bukkit.getWorld("world"), -920, 65, -67);
+	public Location kingdom2 = new Location(Bukkit.getWorld("world"), -920, 65, -67);
 
 	public InventoryClick(Main plugin) {
 		this.plugin = plugin;
@@ -31,32 +34,39 @@ public class InventoryClick implements Listener {
 			return;
 
 		Player player = (Player) event.getWhoClicked();
-		if (!(player.hasPermission("bcp.goto.kingdom1"))) {
-			player.sendMessage(
-					ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("NoPermissionMessage")));
-			return;
-		}
 
 		ItemStack item = event.getCurrentItem();
 
 		if (player.hasPermission("bcp.goto.kingdom1")) {
 			if (item.getType() == Material.COMPASS) {
-				player.teleport(new Location(Bukkit.getWorld("world"), -920, 65, -67));
+				player.teleport(kingdom1);
 
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "You have been teleported to kingdom1!");
 				return;
 			}
-		}
-
-		if (item.getType() == Material.BEACON && player.hasPermission("bcp.goto.kingdom2")) {
-			// player teleport to second kingdom
-
-			// player.sendMessage(ChatColor.LIGHT_PURPLE + "You have been
-			// teleported to kingdom2!");
+		} else {
+			player.sendMessage(
+					ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("NoPermissionMessage")));
+			event.setCancelled(true);
 			return;
 		}
+
+		if (player.hasPermission("bcp.goto.kingdom2")) {
+			if (item.getType() == Material.BEACON) {
+				player.teleport(kingdom2);
+
+				player.sendMessage(ChatColor.LIGHT_PURPLE + "You have been teleported to kingdom2!");
+			}
+		} else {
+			player.sendMessage(
+					ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("NoPermissionMessage")));
+			event.setCancelled(true);
+			return;
+		}
+
 		event.setCancelled(true);
 		player.closeInventory();
+		return;
 	}
 
 }

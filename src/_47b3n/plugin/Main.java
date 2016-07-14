@@ -41,8 +41,10 @@ public class Main extends JavaPlugin {
 	private void registerPermission() {
 		PluginManager pm = getServer().getPluginManager();
 		Permission gotoKingdom1Perm = new Permission("bcp.goto.kingdom1");
+		Permission gotoKingdom2Perm = new Permission("bcp.goto.kingdom2");
 		
 		pm.addPermission(gotoKingdom1Perm);
+		pm.addPermission(gotoKingdom2Perm);
 	}
 
 	private void registerCommands() {

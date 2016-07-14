@@ -13,4 +13,6 @@ commands:
     description: Cleares the inventory of the player!
   goto:
     description: Opens a menu with clickable teleport locations!
+    usage: /<command>
+
     
