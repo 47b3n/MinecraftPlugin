@@ -23,6 +23,7 @@ public class PlayerInteract implements Listener {
 				Sign sign = (Sign) e.getClickedBlock().getState();
 				sign.setLine(1, "Stop");
 				sign.update();
+				e.getPlayer().sendMessage("Yoo");
 			}
 		}
 	}
