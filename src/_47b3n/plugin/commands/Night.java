@@ -8,11 +8,11 @@ import org.bukkit.entity.Player;
 import _47b3n.plugin.Main;
 import net.md_5.bungee.api.ChatColor;
 
-public class Day implements CommandExecutor {
-
+public class Night implements CommandExecutor {
+	
 	private Main plugin;
 
-	public Day(Main plugin) {
+	public Night(Main plugin) {
 		this.plugin = plugin;
 	}
 
@@ -22,12 +22,12 @@ public class Day implements CommandExecutor {
 					ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("NotPlayerMessage")));
 			return false;
 		}
-
+		
 		Player player = (Player) sender;
 		
-		if(player.hasPermission("bcp.day")) {
+		if(player.hasPermission("bcp.night")) {
 			player.getWorld().setTime(13000);
-			player.sendMessage(ChatColor.LIGHT_PURPLE + "Changed the time to day!");
+			player.sendMessage(ChatColor.LIGHT_PURPLE + "Changed the time to night!");
 			return true;
 		} else {
 			player.sendMessage(
@@ -35,4 +35,5 @@ public class Day implements CommandExecutor {
 			return false;
 		}
 	}
+
 }

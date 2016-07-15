@@ -1,4 +1,4 @@
-package _47b3n.plugin.events.player;
+package _47b3n.plugin.events.entity.player;
 
 import org.bukkit.ChatColor;
 import org.bukkit.craftbukkit.v1_9_R2.entity.CraftPlayer;

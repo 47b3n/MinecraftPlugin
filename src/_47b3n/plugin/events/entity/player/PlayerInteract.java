@@ -1,4 +1,4 @@
-package _47b3n.plugin.events.player;
+package _47b3n.plugin.events.entity.player;
 
 import org.bukkit.block.Sign;
 import org.bukkit.event.EventHandler;

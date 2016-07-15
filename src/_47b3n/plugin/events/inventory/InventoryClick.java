@@ -40,7 +40,6 @@ public class InventoryClick implements Listener {
 		if (player.hasPermission("bcp.goto.kingdom1")) {
 			if (item.getType() == Material.COMPASS) {
 				player.teleport(kingdom1);
-
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "You have been teleported to kingdom1!");
 				return;
 			}
@@ -54,7 +53,6 @@ public class InventoryClick implements Listener {
 		if (player.hasPermission("bcp.goto.kingdom2")) {
 			if (item.getType() == Material.BEACON) {
 				player.teleport(kingdom2);
-
 				player.sendMessage(ChatColor.LIGHT_PURPLE + "You have been teleported to kingdom2!");
 			}
 		} else {

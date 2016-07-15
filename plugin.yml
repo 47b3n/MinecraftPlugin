@@ -6,6 +6,9 @@ commands:
   day:
     description: Sets the time to day!
     usage: /<command>
+  night:
+    description: Stes the time to night!
+    usage: /<command>
   basickit:
     description: Gives the player some basic items!
     usage: /<command>
@@ -21,5 +24,6 @@ commands:
   hub:
     description: Teleports you to the hub/spawn!
     usage: /<command>
+    
 
     

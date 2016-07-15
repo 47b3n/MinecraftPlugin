@@ -13,9 +13,10 @@ import _47b3n.plugin.commands.Day;
 import _47b3n.plugin.commands.Gm;
 import _47b3n.plugin.commands.Goto;
 import _47b3n.plugin.commands.Hub;
+import _47b3n.plugin.commands.Night;
+import _47b3n.plugin.events.entity.player.PlayerInteract;
+import _47b3n.plugin.events.entity.player.PlayerJoin;
 import _47b3n.plugin.events.inventory.InventoryClick;
-import _47b3n.plugin.events.player.PlayerInteract;
-import _47b3n.plugin.events.player.PlayerJoin;
 import net.md_5.bungee.api.ChatColor;
 
 public class Main extends JavaPlugin {
@@ -60,6 +61,7 @@ public class Main extends JavaPlugin {
 
 	private void registerCommands() {
 		getCommand("day").setExecutor(new Day(this));
+		getCommand("night").setExecutor(new Night(this));
 		getCommand("basickit").setExecutor(new BasicKit(this));
 		getCommand("gm").setExecutor(new Gm(this));
 		getCommand("clrinv").setExecutor(new ClrInv(this));
