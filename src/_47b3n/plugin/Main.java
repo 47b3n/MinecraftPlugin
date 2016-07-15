@@ -12,6 +12,7 @@ import _47b3n.plugin.commands.ClrInv;
 import _47b3n.plugin.commands.Day;
 import _47b3n.plugin.commands.Gm;
 import _47b3n.plugin.commands.Goto;
+import _47b3n.plugin.commands.Hub;
 import _47b3n.plugin.events.inventory.InventoryClick;
 import _47b3n.plugin.events.player.PlayerInteract;
 import _47b3n.plugin.events.player.PlayerJoin;
@@ -43,8 +44,18 @@ public class Main extends JavaPlugin {
 		Permission gotoKingdom1Perm = new Permission("bcp.goto.kingdom1");
 		Permission gotoKingdom2Perm = new Permission("bcp.goto.kingdom2");
 		
+		Permission gmSurvivalPerm = new Permission("bcp.gm.survival");
+		Permission gmCreativePerm = new Permission("bcp.gm.creative");
+		Permission gmAdventurePerm = new Permission("bcp.gm.adventure");
+		Permission gmSpectatorPerm = new Permission("bcp.gm.spectator");
+
 		pm.addPermission(gotoKingdom1Perm);
 		pm.addPermission(gotoKingdom2Perm);
+		
+		pm.addPermission(gmSurvivalPerm);
+		pm.addPermission(gmCreativePerm);
+		pm.addPermission(gmAdventurePerm);
+		pm.addPermission(gmSpectatorPerm);
 	}
 
 	private void registerCommands() {
@@ -53,6 +64,7 @@ public class Main extends JavaPlugin {
 		getCommand("gm").setExecutor(new Gm(this));
 		getCommand("clrinv").setExecutor(new ClrInv(this));
 		getCommand("goto").setExecutor(new Goto(this));
+		getCommand("hub").setExecutor(new Hub(this));
 	}
 
 	private void registerEvents() {
@@ -60,6 +72,7 @@ public class Main extends JavaPlugin {
 
 		pm.registerEvents(new PlayerInteract(this), this);
 		pm.registerEvents(new PlayerJoin(this), this);
+		
 		pm.registerEvents(new InventoryClick(this), this);
 	}
 

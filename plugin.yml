@@ -5,14 +5,21 @@ name: BasicCoolPlugin
 commands:
   day:
     description: Sets the time to day!
+    usage: /<command>
   basickit:
     description: Gives the player some basic items!
+    usage: /<command>
   gm:
     description: Sets the player in another gamemode!
+    usage: /<command> <gamemode number>
   clrinv:
     description: Cleares the inventory of the player!
+    usage: /<command>
   goto:
     description: Opens a menu with clickable teleport locations!
+    usage: /<command>
+  hub:
+    description: Teleports you to the hub/spawn!
     usage: /<command>
 
     
